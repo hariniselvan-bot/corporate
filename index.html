@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading | Stackly</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#000000,#1a0000);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.loader-container{
+    text-align:center;
+}
+
+/* LOGO */
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff1a1a;
+    margin-bottom:40px;
+    letter-spacing:2px;
+}
+
+/* SPINNER */
+.spinner{
+    width:80px;
+    height:80px;
+    border:6px solid #333;
+    border-top:6px solid red;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:auto;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.loading-text{
+    margin-top:20px;
+    font-size:16px;
+    letter-spacing:1px;
+    color:#ccc;
+}
+
+/* PROGRESS BAR */
+.progress{
+    width:220px;
+    height:6px;
+    background:#222;
+    margin:25px auto;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    width:0%;
+    background:red;
+    animation:load 3s forwards;
+}
+
+@keyframes load{
+    to{width:100%;}
+}
+</style>
+
+<!-- AUTO REDIRECT -->
+<meta http-equiv="refresh" content="3; url=home.html">
+
+</head>
+<body>
+
+<div class="loader-container">
+
+    <div class="logo">STACKLY</div>
+
+    <div class="spinner"></div>
+
+    <div class="progress">
+        <span></span>
+    </div>
+
+    <div class="loading-text">Loading your experience...</div>
+
+</div>
+
+</body>
+</html>
